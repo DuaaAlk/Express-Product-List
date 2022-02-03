@@ -1,9 +1,11 @@
 const express = require("express");
-const connectDB = require("./database");
+const connectDB = require("./Database/models/index");
 const app = express();
-const PORT = 8000;
-
 const productRouter = require("./routers/products.routers");
+
+const dotenv = require("dotenv");
+dotenv.config();
+const PORT = process.env.PORT;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -20,8 +20,10 @@
   "homepage": "https://github.com/DuaaAlk/Express-Product-List#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "mongoose": "^6.1.10",
+    "mongoose-slug-plugin": "^2.1.0",
     "slugify": "^1.6.5"
   }
 }
