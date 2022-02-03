@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/DuaaAlk/Express-Product-List#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.10",
+    "slugify": "^1.6.5"
   }
 }

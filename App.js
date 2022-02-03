@@ -1,12 +1,15 @@
 const express = require("express");
-const data = require("./data");
-const PORT = 8000;
+const connectDB = require("./database");
 const app = express();
+const PORT = 8000;
 
-app.get("/api/products", (req, res) => {
-  res.json(data);
-});
+const productRouter = require("./routers/products.routers");
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use("/api/products", productRouter);
 
 app.listen(PORT, () => {
   console.log("The application is running on localhost:8000");
+  connectDB();
 });
